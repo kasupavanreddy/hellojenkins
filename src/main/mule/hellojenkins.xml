@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 		<http:listener-connection host="0.0.0.0" port="${http.port}" />
 	</http:listener-config>
 	<configuration-properties doc:name="Configuration properties" doc:id="fbb37465-da7b-4584-ab26-15019e0b0a56" file="port.yaml" />
-	<api-gateway:autodiscovery apiId="16965422" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="55c708f9-dd8a-4ce0-8adf-8dad9ed7a17c" flowRef="hellojenkinsFlow" />
+	<api-gateway:autodiscovery apiId="16972439" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="a2d7d336-9e0a-4f27-a9f3-8dde088955f9" flowRef="hellojenkinsFlow" />
 	<flow name="hellojenkinsFlow" doc:id="caf3d4ba-6eb4-4a91-9203-31b43fd80cdb" >
 		<http:listener doc:name="Listener" doc:id="2d791672-e7f6-4c00-bec5-da0ab3f2a850" config-ref="HTTP_Listener_config" path="jenkins"/>
 		<set-payload value='#[%dw 2.0&#10;output application/json&#10;---&#10;"message":"welcme to ci/cd implementation"]' doc:name="Set Payload" doc:id="437f74e5-b58f-4abc-97d0-8ee1f014d4e2" />
