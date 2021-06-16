@@ -11,5 +11,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="hellojenkinsFlow" doc:id="caf3d4ba-6eb4-4a91-9203-31b43fd80cdb" >
 		<http:listener doc:name="Listener" doc:id="2d791672-e7f6-4c00-bec5-da0ab3f2a850" config-ref="HTTP_Listener_config" path="jenkins"/>
 		<set-payload value='#[%dw 2.0&#10;output application/json&#10;---&#10;"message":"welcme to ci/cd implementation"]' doc:name="Set Payload" doc:id="437f74e5-b58f-4abc-97d0-8ee1f014d4e2" />
+		<set-payload value="successfully integreated with cicd" doc:name="Set Payload" doc:id="fc280496-b872-40f4-b490-c172103fafd3" />
 	</flow>
 </mule>
